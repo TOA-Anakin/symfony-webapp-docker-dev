@@ -17,7 +17,7 @@ Docker containers for traditional Symfony 6.3.* web apps, i.e., apps that you wo
     ```
 2. Rename the cloned repo as desired: 
     ```.sh
-    mv symfony-webapp-docker your_project_name
+    mv symfony-webapp-docker-dev your_project_name
     ```
 3. Find your user ID using the `id -u` command and update the `.docker/.env` file accordingly.
 4. `cd` into the `.docker` directory and build the Docker containers:

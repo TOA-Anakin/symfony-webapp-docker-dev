@@ -13,7 +13,7 @@ Docker containers for traditional Symfony 6.3.* web apps, i.e., apps that you wo
 
 1. Clone the repo:
     ```.sh
-    git clone https://github.com/TOA-Anakin/symfony-webapp-docker.git
+    git clone https://github.com/TOA-Anakin/symfony-webapp-docker-dev.git
     ```
 2. Rename the cloned repo as desired: 
     ```.sh
@@ -44,13 +44,11 @@ Docker containers for traditional Symfony 6.3.* web apps, i.e., apps that you wo
 5. Open the terminal of the PHP container (mine is named `symfony_webapp_docker-php-1`) and create a Symfony skeleton project using `composer`:
     ```.sh
     docker exec -it symfony_webapp_docker-php-1 bash
-    composer create-project symfony/skeleton:"6.3.*" temp_dir
+    composer create-project symfony/skeleton:"6.3.*" tmp_dir
     ```
     Move the contents of `temp_dir` into the project root:
     ```.sh
-    mv temp_dir/* .
-    mv temp_dir/.[!.]* .
-    rmdir temp_dir
+    mv tmp_dir/* . && mv tmp_dir/.[!.]* . && rmdir tmp_dir
     ```
     Install Symfony web app packages:
     ```.sh
